@@ -1,0 +1,132 @@
+.login_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px; 
+    box-sizing: border-box;
+    max-width: 800px; 
+    margin: auto;
+    box-shadow: 0 4px 12px rgba(158, 158, 158, 0.12);
+    border-radius: 8px;
+    background-color: #fff;
+    margin: 100px auto 50px; 
+}
+.login_container{
+    padding: 40px;
+}
+
+
+.login_msg {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+.login_text{
+    text-align: center;
+    padding-left: 30px;
+}
+
+.login_text h3 {
+    font-weight: 700;
+    font-size: 24px;
+    color: #344767;
+}
+
+.login_text p {
+    color: #67748e;
+    font-size: 14px;
+}
+
+.login_text a {
+    color: #da7000;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.form {
+    width: 100%;
+}
+
+.form input {
+    color: #333333;
+    font-size: 14px; 
+    outline: none;
+    box-shadow: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 10px); 
+    padding: 15px; 
+    margin: 0 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px; 
+}
+
+
+.password_container {
+    position: relative;
+    /* display: flex; */
+    align-items: center;
+}
+
+.password_input {
+    width: calc(100% - 60px); 
+    padding-right: 50px; 
+    box-sizing: border-box;
+}
+
+.password_icon {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%); 
+    right: 20px;
+    cursor: pointer;
+}
+
+
+.button_wrapper {
+    width: 100%;
+}
+
+button.button {
+    width: calc(100% - 10px); 
+    padding: 15px; 
+    margin: 0 20px; 
+    background-color: #0B5ED7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.termPrivacy_container,
+.alreadyAccount_container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.termPrivacy_container p,
+.alreadyAccount_container p {
+    color: #67748e;
+}
+
+.termPrivacy_container a,
+.alreadyAccount_container a {
+    color: #da7000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form_group.name_fields {
+        flex-direction: column; 
+    }
+
+    .half_width {
+        width: calc(100% - 10px); 
+    }
+}
