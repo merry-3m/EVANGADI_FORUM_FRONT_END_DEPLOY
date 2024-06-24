@@ -181,7 +181,7 @@ const QuestionAnswerPage = () => {
 
       // Send request to edit answer by answerId
       const response = await axios.put(
-        `/answers/answer/${answerId}`,
+        `/answers/answers/${answerId}`,
         { answer: newAnswer },
         {
           headers: {
@@ -216,7 +216,7 @@ const QuestionAnswerPage = () => {
       }
 
       // Send request to delete answer by answerId
-      const response = await axios.delete(`/answers/answer/${answerId}`, {
+      const response = await axios.delete(`/answers/answers/${answerId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
