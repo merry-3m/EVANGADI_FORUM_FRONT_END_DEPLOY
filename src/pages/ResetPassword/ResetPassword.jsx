@@ -12,6 +12,17 @@ const ResetPassword = () => {
   const [newPassword, setNewPassword] = useState("");
   const { toggleVisibility, Icon, InputType } = ShowPassword();
 
+  const handleSendResetEmail = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post("/users/send-reset-email", { email });
+      toast("Reset password email sent. Please check your inbox.");
+    } catch (error) {
+      console.error("Error sending reset email:", error);
+      toast("Failed to send reset password email. Please try again.");
+    }
+  };
+
   const handleResetPassword = async (e) => {
     e.preventDefault();
     try {
@@ -27,7 +38,7 @@ const ResetPassword = () => {
   return (
     <div className="reset-password-container">
       <h2>Reset Password</h2>
-      <form onSubmit={handleResetPassword} className="reset-password-form">
+      <form onSubmit={handleSendResetEmail} className="reset-password-form">
         <div>
           <label htmlFor="email">Email:</label>
           <input
@@ -38,6 +49,10 @@ const ResetPassword = () => {
             required
           />
         </div>
+        <button type="submit">Send Reset Email</button>
+      </form>
+
+      <form onSubmit={handleResetPassword} className="reset-password-form">
         <div className="password-container">
           <input
             id="newPassword"

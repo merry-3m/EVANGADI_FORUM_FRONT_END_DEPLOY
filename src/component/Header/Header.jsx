@@ -93,7 +93,7 @@ const handleLogOut = ()=> {
               </li>
               <li>
                {/* sign in / log out based on the path */}
-{!user? (
+{!user || Object.user === 0 ? (
             <Link to="/auth">
               <button>Sign In</button>
             </Link>
